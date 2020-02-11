@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小濮的博客</title>
+  
+  <subtitle>记录生活 &amp;&amp; 坚持学习</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-02-11T13:16:33.953Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Iris Pu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>武汉肺炎-自己煮饭第二天</title>
+    <link href="http://yoursite.com/2020/02/11/%E6%AD%A6%E6%B1%89%E8%82%BA%E7%82%8E-%E8%87%AA%E5%B7%B1%E7%85%AE%E9%A5%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
+    <id>http://yoursite.com/2020/02/11/%E6%AD%A6%E6%B1%89%E8%82%BA%E7%82%8E-%E8%87%AA%E5%B7%B1%E7%85%AE%E9%A5%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9/</id>
+    <published>2020-02-11T09:43:57.000Z</published>
+    <updated>2020-02-11T13:16:33.953Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;实际上，这是第三天。8号下午四点多坐姑父的车到了小区，然后出去了一次，拿快递–在微信朋友圈看到买的酒精，顺便在小区门口买了调味品、水果。。。<br>&emsp;&emsp;今天早上煮了汤圆，黑芝麻馅的，齁甜；中午，炸了葱油，做了一个葱油拌面，配了点香肠，感觉自己有点做饭的天赋，哈哈哈；晚上，煮了莴苣蛋汤，主食是番薯饼（从老家带过来的）。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;实际上，这是第三天。8号下午四点多坐姑父的车到了小区，然后出去了一次，拿快递–在微信朋友圈看到买的酒精，顺便在小区门口买了调味品、水果。。。&lt;br&gt;&amp;emsp;&amp;emsp;今天早上煮了汤圆，黑芝麻馅的，齁甜；中午，炸了葱油，做了一个葱油拌面，配了点香
+      
+    
+    </summary>
+    
+    
+      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="武汉肺炎" scheme="http://yoursite.com/tags/%E6%AD%A6%E6%B1%89%E8%82%BA%E7%82%8E/"/>
+    
+      <category term="一日三餐" scheme="http://yoursite.com/tags/%E4%B8%80%E6%97%A5%E4%B8%89%E9%A4%90/"/>
+    
+  </entry>
+  
+</feed>

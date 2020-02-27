@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    about |  小濮的博客
+    Linux上安装Nginx |  小濮的博客
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,7 +32,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
+  <article id="post-Linux上安装nginx" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  about
+  Linux上安装Nginx
 </h1>
   
 
@@ -48,6 +48,47 @@
     
 
     
+    <div class="article-meta">
+      <a href="/2020/02/24/Linux%E4%B8%8A%E5%AE%89%E8%A3%85nginx/" class="article-date">
+  <time datetime="2020-02-24T06:16:57.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">220字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
 
     
 
@@ -58,7 +99,26 @@
       
 
       
-      <p>待完善</p>
+      <h3 id="一-安装前准备"><a href="#一-安装前准备" class="headerlink" title="一.安装前准备"></a>一.安装前准备</h3><h4 id="1-安装wget"><a href="#1-安装wget" class="headerlink" title="1.安装wget"></a>1.安装wget</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install wget -y</span><br></pre></td></tr></table></figure>
+<h4 id="2-安装gcc编译环境"><a href="#2-安装gcc编译环境" class="headerlink" title="2.安装gcc编译环境"></a>2.安装gcc编译环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+<h4 id="3-Nginx的http模块需要使用pcre来解析正则表达式"><a href="#3-Nginx的http模块需要使用pcre来解析正则表达式" class="headerlink" title="3.Nginx的http模块需要使用pcre来解析正则表达式"></a>3.Nginx的http模块需要使用pcre来解析正则表达式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre pcre-devel</span><br></pre></td></tr></table></figure>
+<h4 id="4-依赖解压包"><a href="#4-依赖解压包" class="headerlink" title="4.依赖解压包"></a>4.依赖解压包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure>
+<h4 id="5-openssl安装"><a href="#5-openssl安装" class="headerlink" title="5.openssl安装"></a>5.openssl安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="二-安装Nginx"><a href="#二-安装Nginx" class="headerlink" title="二.安装Nginx"></a>二.安装Nginx</h3><h4 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1.官网下载"></a>1.官网下载</h4><p><a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">Nginx官网下载地址</a><br>如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;nginx-1.16.1.tar.gz</span><br></pre></td></tr></table></figure>
+<h4 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf nginx-1.16.1.tar.gz</span><br></pre></td></tr></table></figure>
+<h4 id="3-指定安装目录"><a href="#3-指定安装目录" class="headerlink" title="3.指定安装目录"></a>3.指定安装目录</h4><p>将解压文件移动到/usr/local/目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv nginx-1.16.1 &#x2F;usr&#x2F;local&#x2F;</span><br></pre></td></tr></table></figure>
+<p>进入/usr/local/nginx-1.16.1目录，执行以下命令指定安装目录/usr/local/nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx</span><br></pre></td></tr></table></figure>
+<h4 id="4-编译安装"><a href="#4-编译安装" class="headerlink" title="4.编译安装"></a>4.编译安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h4 id="5-启动与停止"><a href="#5-启动与停止" class="headerlink" title="5.启动与停止"></a>5.启动与停止</h4><p>进入/nginx/sbin目录<br>启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;nginx</span><br></pre></td></tr></table></figure>
+<p>强制停止</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;nginx -s stop</span><br></pre></td></tr></table></figure>
+<p>有序停止</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;nginx -s quit</span><br></pre></td></tr></table></figure>
 
       
       <!-- reward -->
@@ -126,13 +186,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/about/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/02/24/Linux%E4%B8%8A%E5%AE%89%E8%A3%85nginx/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
+
 
     </footer>
 
@@ -140,6 +202,25 @@
 
   
   
+  <nav class="article-nav">
+    
+      <a href="/2020/02/27/ehcache%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            ehcache配置文件详解
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/02/12/%E5%8A%AA%E5%8A%9B%E8%B5%9A%E9%92%B1/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">努力赚钱</div>
+      </a>
+    
+  </nav>
+
 
   
 
@@ -197,6 +278,8 @@
 
   
 
+  
+  
   
 
 </article>
@@ -357,6 +440,30 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 <script>
